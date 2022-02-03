@@ -22,10 +22,10 @@ const bici = [
 ];
 
 //creo una funzione per sommare tutti i pesi delle bici, da utilizzare successivamente
-function sommaTotale(elementi) {                    
+function sommaTotale(nomeArray, parametroDaSommare) {                    
     let somma = 0;
-    for (let i = 0; i< elementi.length; i++) {
-        somma += elementi[i]["peso"];
+    for (let i = 0; i< nomeArray.length; i++) {
+        somma += nomeArray[i][parametroDaSommare];
     }
     return somma;
 }
@@ -35,7 +35,7 @@ function showLighterBike() {
 
     let pesoMinore = "";                    
 
-    let pesoCorrente = sommaTotale(bici);   //creo un numero che sarà sempre più grande del peso della bici ciclata
+    let pesoCorrente = sommaTotale(bici, "peso");   //creo un numero che sarà sempre più grande del peso della bici ciclata
 
     for (i=0; i<bici.length; i++) { 
 
