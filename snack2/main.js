@@ -66,8 +66,16 @@ console.log(squadreCalcio);
 
 
 //Clono array nuovo con quello precedente
-//NON FUNZIONA  let nuovoArray = [...squadreCalcio];
+
+/* NON FUNZIONA
+let nuovoArray = [...squadreCalcio]; 
+*/
+
+let nuovoArray = squadreCalcio.map(a => {return {...a}})
+
+/* Soluzione alternativa al deep cloning 
 let nuovoArray = JSON.parse(JSON.stringify(squadreCalcio))
+*/
 
 //Cancello tutti i valori puntiFatti dal nuovo array
 for (i=0; i<nuovoArray.length; i++) {
