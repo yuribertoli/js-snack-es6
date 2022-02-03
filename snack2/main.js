@@ -61,7 +61,16 @@ for (let key of squadreCalcio) {
 }
 
 console.log(squadreCalcio);
-
+/* 
+let newSquadre = []: 
+for(let i = 0; i<squadreCalcio.length; i++){
+       const {nome, falliSubiti} = squadreCalcio[i];
+       newSqaudre.push({
+             nome,
+              falliSubiti
+      });
+}
+ */
 
 
 
@@ -71,13 +80,13 @@ console.log(squadreCalcio);
 let nuovoArray = [...squadreCalcio]; 
 */
 
-let nuovoArray = squadreCalcio.map(a => {return {...a}})
+let nuovoArray = squadreCalcio.map(a => {return {...a}});
 
 /* Soluzione alternativa al deep cloning 
-let nuovoArray = JSON.parse(JSON.stringify(squadreCalcio))
+let nuovoArray = JSON.parse(JSON.stringify(squadreCalcio));
 */
 
-//Cancello tutti i valori puntiFatti dal nuovo array
+//Cancello tutti i valori puntiFatti dagli oggetti del nuovo array
 for (i=0; i<nuovoArray.length; i++) {
 
     delete nuovoArray[i]["puntiFatti"];
@@ -93,7 +102,8 @@ console.log(nuovoArray);
 
 
 
-/* NON FUNZIONA
+/* Alternativa per cambiare i numeri
+
 //ciclo ogni oggetto presente nell'array per cambiarne i valori punti e falli subiti
 for (i=0; i<squadreCalcio.length; i++) {
 
@@ -102,9 +112,13 @@ for (i=0; i<squadreCalcio.length; i++) {
     puntiFatti = randomNumber(50, 80);
     falliSubiti = randomNumber(400, 650);
 
-    console.log("I punti fatti sono " + puntiFatti);
-    console.log("I falli subiti sono " + falliSubiti);
+    squadreCalcio[i]["puntiFatti"] = puntiFatti;
+    squadreCalcio[i]["falliSubiti"] = falliSubiti; 
 
 } 
-*/
+
+console.log(squadreCalcio);
+
+
+ */
 

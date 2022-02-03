@@ -54,6 +54,16 @@ function showLighterBike() {
 }
 
 
+/* Alternativa 
+
+let biciLeggera = bici[0]: 
+for(let i = 0; i<bici.length; i++){
+       if(biciLeggera.peso > bici[i].peso){
+              biciLeggera = bici[i]
+       }
+}
+
+*/
 
 console.log(showLighterBike());
 
