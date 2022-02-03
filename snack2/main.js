@@ -61,17 +61,6 @@ for (let key of squadreCalcio) {
 }
 
 console.log(squadreCalcio);
-/* 
-let newSquadre = []: 
-for(let i = 0; i<squadreCalcio.length; i++){
-       const {nome, falliSubiti} = squadreCalcio[i];
-       newSqaudre.push({
-             nome,
-              falliSubiti
-      });
-}
- */
-
 
 
 //Clono array nuovo con quello precedente
@@ -95,13 +84,6 @@ for (i=0; i<nuovoArray.length; i++) {
 
 console.log(nuovoArray);
 
-
-
-
-
-
-
-
 /* Alternativa per cambiare i numeri
 
 //ciclo ogni oggetto presente nell'array per cambiarne i valori punti e falli subiti
@@ -118,7 +100,21 @@ for (i=0; i<squadreCalcio.length; i++) {
 } 
 
 console.log(squadreCalcio);
+*/
 
 
+/* Alternativa per pushare gli oggetti nell'array
+
+let newSquadre = []: 
+for(let i = 0; i<squadreCalcio.length; i++){
+       const {nome, falliSubiti} = squadreCalcio[i];
+       newSqaudre.push({
+             nome,
+              falliSubiti
+      });
+}
  */
+
+
+
 
