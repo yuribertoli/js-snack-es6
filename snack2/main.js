@@ -60,7 +60,32 @@ for (let key of squadreCalcio) {
     
 }
 
-/* 
+console.log(squadreCalcio);
+
+
+
+
+//Clono array nuovo con quello precedente
+//NON FUNZIONA  let nuovoArray = [...squadreCalcio];
+let nuovoArray = JSON.parse(JSON.stringify(squadreCalcio))
+
+//Cancello tutti i valori puntiFatti dal nuovo array
+for (i=0; i<nuovoArray.length; i++) {
+
+    delete nuovoArray[i]["puntiFatti"];
+
+}
+
+console.log(nuovoArray);
+
+
+
+
+
+
+
+
+/* NON FUNZIONA
 //ciclo ogni oggetto presente nell'array per cambiarne i valori punti e falli subiti
 for (i=0; i<squadreCalcio.length; i++) {
 
@@ -75,4 +100,3 @@ for (i=0; i<squadreCalcio.length; i++) {
 } 
 */
 
-console.log(squadreCalcio);
